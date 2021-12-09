@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_formulario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="icon" type ="image/jpg" href="./imagenes/tomato.icon.jpg">
+    
+    <title>Formulario Registro </title>
+</head>
+<body>
+
+<header class="header">
+
+    <h1>FORMULARIO DE REGISTRO</h1>
+
+</header>
+
+
+
+
+
+    <form class="form" method="POST" action="/registro" autocomplete="off">
+        <div class="form_container">
+            <label for="nombre">Nombres completos</label>
+                <input class="form_input" type="text" name="nombre" id="nombre" placeholder="Nombres Completo" required title="PorFavor Completa Este campo">
+            <br>
+            <label for="apellido">Apellidos</label>
+                <input class="form_input" type="text" name="apellido" id="nombre" placeholder="Apellidos Completos" required title="PorFavor Completa Este campo">
+                <br>
+            <br>
+
+            <label for="genero">Genero</label>
+            <div class="genero">
+                <input  name="genero" value="M" id="Genero" type="radio" value="M">
+                    <label for="genero-M" class="label-radio">Masculino</label>
+                <input  name="genero" value="F" id="Genero" type="radio" value="F">
+                    <label for="genero-F" class="label-radio">Femenino</label>
+                <input  name="genero" value="Un" id="Genero" type="radio" value="U">
+                    <label for="genero-U" class="label-radio">Indefinido</label>
+            </div>
+            
+            <label for="correo">Email</label>
+                <input class="form_input" type="email" name="correo" id="correo" placeholder="email" required>
+            <br>
+            
+            <label for="direccion">Direccion</label>
+                <input class="form_input" id="direccion"  name="direccion" placeholder="Calle #-#Casa/#Dpto" type="adrees" required>
+            <br>
+            <label for="CodigoArea">Telefono</label>
+                <select  id="CodigoArea" placeholder="+54" name="CodigoArea" required>
+                
+                   
+                    <option value="+54" selected>+54</option>
+                    
+                </select>
+            <input type="tel" class="form_input"  placeholder="Ingrese numero de Telefono" name="telefono" required >
+            
+           
+       <br>
+
+
+        
+    <div class="btn-container">
+            <button  class="btn btn1" type="submit">REGISTRAR</button>
+            <button  class="btn btn2" type="reset"><a href="#">BORRAR</a></button>        
+            <button  class="btn btn3" type="reset"><a href="/"> REGRRESAR</a></button>        
+           
+    </div>
+
+        </div>
+    </form>
+    
+</body>
+</html>

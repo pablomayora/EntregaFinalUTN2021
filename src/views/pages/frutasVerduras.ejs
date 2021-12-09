@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/hamburguer.css">  <!--ESTILO MENU HAMBURGUESA-->
+    <link rel="stylesheet" href="./css/Productos.css">
+    <link rel="icon" type ="image/jpg" href="./imagenes/tomato.icon.jpg">
+    <title>🥦PRODUCTOS/FRUTAS Y VERDURAS🥦</title>
+</head>
+<body>
+    <h1 class="titlle">FRUTAS - VERDURAS</h1>
+
+    <% data.forEach((prod)=>{%>
+    <div class="container">
+        <div class="card">
+            <img src="<%=prod.imagen%>" alt=<%=prod.alt%>>
+                <h3><%=prod.nombre%></h3>
+                <p><%=prod.descripcion%></p>
+                <span><%=prod.precio%></span>
+                <button class="btn"><a href="">Agregar al Carrito</a></button>
+        </div>
+        <%  })  %>
+
+      
+       
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!---->
+<button class="panel-btn hamburger hamburger--vortex" type="button">
+    <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+    </span>
+</button>
+      
+
+<!--SCRIPT-->
+<script src="js/dom.js" type="module"></script> 
+    
+<!--ASIDE-->
+<aside class="aside">
+    <%-include('../partials/aside.ejs')%>
+</aside>
+
+
+
+    
+</body>
+</html>

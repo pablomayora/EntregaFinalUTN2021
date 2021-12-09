@@ -1,0 +1,514 @@
+:root{
+
+
+--main--color:#eb2f06 ;
+--second-modal-color:#2f3640;
+--main-modal-color:  rgb(235, 47, 6,0.9); 
+}
+
+
+
+
+html{
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+*::after,*::before{
+
+    box-sizing: inherit;
+}
+
+body>*{/*TODOS LOS ELEMENTOS HIJOS DIRECTOS DEL BODY*/
+    background-color:#40739e;
+    border: medium solid black;
+
+
+
+}
+h1{text-align: center;
+    font-size: 2rem;
+    color:var(--main--color);
+    font-weight: 900 ;}
+
+
+
+    
+body{
+    margin: 0;
+    min-height: 100vh;
+    overflow-x:hidden ;/*Lo Que se desborda en X se oculta*/
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(5,auto);
+    grid-template-areas: 
+    "header header header header header header"
+    "nav    nav    nav     nav   nav    nav"
+    "main   main   main   main   main   main"
+    "low   low  low    low    low  low   "
+    "footer footer footer footer footer footer";
+
+}
+
+    main{
+        height: 60vh;
+        background-image: url(/imagenes/frutosSecos.jpg);
+        background-repeat:no-repeat ;
+        background-size: 100%;
+        background-position: center;
+        display: grid;
+        /*grid-template-columns: 1fr 1fr;*/
+        /*justify-content: center;*/
+        align-items: center;
+        align-content: center;
+
+        grid-template-areas: 
+        "bienvenida slogan"
+        "bienvenida  compra";
+        
+        
+    }
+
+        .bienvenida{
+           /* margin-top:40% ;*/
+            grid-area: bienvenida;
+            display: inline-flex;
+            width: 80%;
+            height: fit-content;
+            justify-content: center;
+            background-color: black;
+            font-weight:bold;
+            font-size: 1.6rem;
+            color:white;
+            text-align: center;
+        }
+
+        .slogan{
+            height: 100%;
+            grid-area:slogan;
+            display: inline-flex;
+            width: 80%;
+            height: fit-content;
+            justify-content: center;
+            background-color:black;
+            color: beige;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 900;
+            
+        }
+        .container-btn{
+        
+            grid-area: compra;
+            margin-left: 30%;
+          
+        }
+      
+            .btn-compra{
+             width:40%;
+             height: 30px;
+             font-family: 'Montserrat', sans-serif;   
+             font-size: 0.9rem;
+             font-weight: 500;
+             display: inline-flex;
+             align-items: center;
+             justify-content: center;
+             background-color:black; 
+             border: none;
+             cursor: pointer;
+             transition: 0.3s ease all;
+             position: relative;
+             overflow: hidden;
+            
+
+                    
+            }
+
+            .btn-compra::after{
+                content: "";
+                width: 100%; 
+                height: 100%;
+                background-color: var(--main--color) ;
+                position: absolute;
+                z-index: 1;
+                top: -30px;
+                left: 0;    
+                transition: 0.3s ease-in-out all;
+            }
+
+            .btn-compra a{
+                text-align: center;
+                text-decoration: none;
+                color:white;
+                position: relative;  
+                z-index: 2;
+                
+            }
+
+            .btn-compra:hover::after{
+                top: 0;
+            }
+
+
+
+/*DESKTOP FIRST*/
+.header{
+    position: sticky;
+    top: 0;
+    grid-area:header;
+    z-index: 999;
+
+}
+.nav{
+  grid-area: nav ;
+  width: 100%;
+  height: 50px;
+  /*transform: translate(0,-100%);*/
+  transition: all 0.3 ease;
+  display: flex;
+  justify-content: space-between;
+  
+
+}
+
+    nav a{
+        text-decoration: none;
+        color: beige;
+    }
+
+    .menu.is-active2{
+       /*display: block;   PRUEBA*/
+       display: flex;
+       flex-direction: column;
+       justify-content: space-evenly;
+       text-align: center;
+       
+    }
+
+
+
+    .menu /*ul*/{ 
+        
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;    
+        width: 80%;     /*OJO*/
+    }
+    .nav.menu.item{
+        font-size: 0.8rem ;
+    }
+        .nav-menu-link{
+            padding: 8px 10px;
+            border-radius: 3px;
+        }
+        .nav-menu-link:hover{
+            background-color:rgba(223, 230, 233,0.5) ;
+            transition: 0.5 ease all;
+        }
+
+
+
+.footer{
+    grid-area:footer;
+ 
+ }
+ 
+ .main{
+     grid-area: main;
+    
+ }
+ 
+ 
+ .aside{
+    padding-top: 2rem;
+    grid-area:aside;   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 998;
+    background-color: (--second-modal-color);
+    opacity: 0.9;
+    transition: all 0.3s ease;/*PARA LA TRANS EN EL ESTADO HOOVER*/
+    /*PARA MOVER EL ASIDE DE LOS LADOS  TRASNFORM*/
+    transform: translate(-100%,0);
+    
+ }
+
+aside a {
+    text-decoration:none;
+    color: beige;
+}
+ 
+    
+
+    .aside a:hover{
+        font-weight: bold;
+        color:var(--main--color);
+        background-color: black;
+
+    
+        }
+
+   /*clase que se va a quitar y colocar*/
+   .aside.is-active{
+    transform: translate(0,0);
+}     
+
+
+ article{
+    /*padding: 2rem;
+    padding-top: 4rem;
+    margin-left:auto ;
+    margin-right: auto;*/
+    height:fit-content;
+    
+     
+ } 
+
+  article h2{
+        text-align: center;
+          color:var(--main--color);
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    
+ .low{
+     grid-area:low;
+ }
+ 
+                    /* BOTON DE HAMBURGUESA*/
+
+ .panel-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right:1vw ;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main--color);
+
+
+ }
+    
+
+
+                /*LAS CARD  */
+
+ .container_card{
+     
+    /* min-width: 320px;
+     height: 460px;*/
+     width: 100%;
+     height: fit-content;
+     display: flex;
+     flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+    
+ }
+
+    .card{
+        width: 300px;
+        height: 400px;
+        background-color: #dfe6e9;
+        /*box-sizing: border-box;*/
+        padding: 10px;
+        border: thin solid black;
+        border-radius: 5%;
+        overflow: hidden;/*----> lo que se deborda se oculta*/
+        
+        /*display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;*/
+        font-size: 0.8rem;
+        
+       
+    }
+
+    .card:hover{
+        transform: translateY(-15px);
+        box-shadow: 0 20px 20px rgb(246, 185, 59,0.8);
+
+
+    }
+
+        .card a{
+            background:rgb(246, 185, 59) ;     
+            color: black;
+            width: 20%;
+            border: 2px solid black;
+            text-align: center;
+            font-weight: 500;
+            margin-left: 110px;
+            
+    }
+
+    
+        .card a:hover{
+            font-weight: bold;
+            background-color:var(--main--color);
+            
+
+        }
+
+        .card img{
+        width: 280px;
+        height:220px ;
+
+        }    
+    
+  
+    
+        .card p{
+        text-align: justify;
+        }
+
+        .card h3{
+            text-align: center;
+            font-weight: 900;
+        }
+
+
+
+
+
+
+
+
+
+
+
+/*BOTON DE HAMBURGUESA PARA NAV*/    
+.panel-btn_s{
+    position: fixed;
+    z-index: 999;
+    top: 3vh;
+    left:3vw ;
+    /*width: 4rem;
+    height: 4rem;*/
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    background:none;
+    border: none;
+    display: none;
+
+
+    }
+
+
+    /*FOOTEER*/
+                
+.footer{
+    background-color:rgba(223, 230, 233,1.0) ;
+    display: flex;
+    width: 100%;
+    height: 200px;
+
+}
+
+.footer .container1{
+    width: 70%;
+    height: inherit;
+    border: thin solid black;
+    background-color:#b2bec3 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .container3{
+        width: 80%;
+        height: 80%;
+        background-color:#74b9ff;
+        display: flex;
+
+    }
+
+        .container3 .row1{
+            width: 30%;
+            border: thin solid black;
+        }
+            .container3 .row1 img{
+                width: 100%;
+                height: 100%;
+            }
+        .container3 .row2{
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            border: medium solid black;
+            text-align: center;
+            justify-content: center;
+
+        }
+
+        .itemFootter{
+            font-size:1rem;
+            font-weight: 900;
+        }
+       
+.footer .container2{
+    width: 30%;
+    height: inherit;
+  
+    border: thin solid black;
+}
+.footer .Logo{
+    height: 200px;
+   width: 100% ;
+ 
+}
+    
+
+/*BOTON DE NAVEGAR*/
+
+    .btn-navegar{
+        width:50%;
+        height: 40px;
+        font-family: 'Montserrat', sans-serif;   
+        font-size: 0.9rem;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color:rgb(246, 185, 59); 
+        border: thin solid black;
+        border-radius: 5px;
+        cursor: pointer
+               
+       }
+        
+       .btn-navegar a{
+           text-align: center;
+           text-decoration: none;
+            color:black;
+            font-weight: bold;
+         
+          
+           
+       }
+       .btn-navegar:hover{
+           background-color: var(--main--color);
+       }
+
+/*IMAGEN PARA EL WHATSAPP*/
+

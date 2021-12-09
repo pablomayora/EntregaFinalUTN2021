@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/hamburguer.css">  <!--ESTILO MENU HAMBURGUESA-->
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/mediaQuery.css">
+<link rel="icon" type ="image/jpg" href="./imagenes/tomato.icon.jpg">
+    <title>TIENDA DE PRODUCTOS SALUDABLES</title>
+</head>
+<body>
+                            <!--HECHO CON AREAS-->
+    <%-include('../partials/header.ejs')%>
+
+ <!--PROBANDO EL MENU-->
+
+ <button class="panel-btn_s hamburger hamburger--vortex" type="button">
+    <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+    </span>
+</button>
+
+
+
+
+ 
+    <nav class="nav">
+        <ul class="menu">
+            <li class="nav-menu-item"><a class="nav-menu-link" href="./registro" target="_blank">REGISTRO </a></li>
+            <li class="nav-menu-item"><a  class="nav-menu-link" href="./nosotros" target="_blank">NOSOTROS</a></li>
+            <li class="nav-menu-item"><a  class="nav-menu-link" href="./contacto" target="_blank"> CONTACTO</a></li>
+            <li class="nav-menu-item"><a  class="nav-menu-link" href="#"> 
+                <img src="./imagenes/verificar-carrito-de-compras.png" alt="CarroCompras" srcset="">
+            </a></li>
+            <li class="nav-menu-item"><a href="#" class="nav-menu-link" > 
+                <img src="./imagenes/sobre-plus.png" alt="Notificaciones" srcset="">
+            </a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+    
+        <span class="bienvenida">Bienvenidos a Tomato !!!!</span>>
+        <strong class="slogan">"Si es Saludable esta aqui"</strong>
+        <div class="container-btn">
+          <button  class="btn-compra"><a href="/productosAlmacen" target="_blank">COMPRAR  </a>  </button>
+        </div>  
+    </main>
+
+<aside class="aside">
+    <%-include('../partials/aside.ejs')%>
+</aside>
+
+    <article class="low">
+       
+         <h2>OPCIONES DE ENTREGA</h2>
+ 
+        <div class="container_card">
+
+            <div class="card">  <!--1-->
+                <h3>RETIRO EN EL LOCAL</h3>
+                <img src="./imagenes/78274946-puesto-de-frutas-locales-tienda-de-productos-frescos-de-alimentos-orgánicos-el-agricultor-del-mercad.jpg"  src="" alt="">
+                <p>Haz tu pedido y cuando este listo te avisamos . Y lo puedes retirar o mandar algun Servicio de delivery</p>
+                <a >SELECCIONAR</a>
+            </div>
+            <div class="card"><!--2-->
+                <h3>SERVIVIO DE DELIVERY</h3>
+                <img src="./imagenes/Tienda-Orgánica-Online-en-Cordoba-1.jpg">
+                <p>Utiliza nuestro servicio de encomineda y te lo llevamos a tu domicilio en el dia y hora que te resulte mas comodo</p>
+                <a>SELCCIONAR</a>
+            </div> 
+
+            
+
+
+
+
+        </div>
+    
+    
+    
+    
+    
+    
+    </article>
+
+    <footer class="footer">
+        <div class="container1">
+            <div class="container3">
+               <div  class="row1">
+                    <img src="./imagenes/icons8-instagram.gif" alt="" srcset="">
+
+               </div>
+               <div class="row2">
+                    <p class="itemFootter">@tomatoSaludable</p>
+                    <p class="itemFootter">DIRECCION: OLLEROS 3146</p>
+                    <p class="itemFootter">+54 1168976467</p>
+
+                    <div class="navegacion">
+                        <button  class="btn-navegar"><a href="https://goo.gl/maps/biXyBErVgASB3KLw8" target="_blank">NAVEGAR</a>  </button>
+                    </div>  
+               </div>
+
+            </div>
+        </div>
+       
+        <div class="container2">
+           <img src="./imagenes/logo.png" class="Logo" alt="LogoTomatoMarket">    <!--ESPACIO PARA EL LOGO-->
+
+        </div>
+    </footer>
+
+
+<button class="panel-btn hamburger hamburger--vortex" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+
+
+
+
+<script src="js/dom.js" type="module"></script>  
+
+</body>
+</html>

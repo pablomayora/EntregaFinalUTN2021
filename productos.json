@@ -1,0 +1,80 @@
+[{
+    "imagen":"./imagenes/ingrediente-aceite-oliva-2.jpg","alt":"AceiteOliva",
+    "producto":"ACEITE DE OLIVA",
+    "descripcion":"Aceite Organico marca Polo 500cc",
+    "precio":"$900"
+    
+},
+
+
+{
+    "imagen":"./imagenes/quinoa.jpg","alt":"Quinoa",
+    "producto":"QUINOA ORGANICA",
+    "descripcion":"Aceite Organico marca Polo 500cc",
+    "precio":"$900"
+    
+},
+
+
+{
+    "imagen":"./imagenes/aportes-miel.jpg","alt":"MielOrganica",
+    "producto":"MIEL ORGANICA",
+    "descripcion":"Miel organica marca La Abejita 500cc",
+    "precio":"$450"
+    
+},
+{
+    "imagen":"./imagenes/granola_casera_sin_azucar_71834_600_square.jpg","alt":"Granola",
+    "producto":"GRANOLA ORGANICA",
+    "descripcion":"Granola Organica 500g Marca Polo",
+    "precio":"$900"
+    
+},
+{
+    "imagen":"./imagenes/nueces.jfif","alt":"Nueces",
+    "producto":"NUECES",
+    "descripcion":"Nueces presentacion de 1 kg",
+    "precio":"$900"
+    
+},
+{
+    "imagen":"./imagenes/almendras.jfif","alt":"Almendras",
+    "producto":"ALMENDRAS",
+    "descripcion":"Almendras presentacion de 500 kg",
+    "precio":"$900"
+    
+},
+
+{
+    "imagen":"./imagenes/chia.jfif","alt":"Semillas de Chia",
+    "producto":"SEMILLAS DE CHIA",
+    "descripcion":"Semillas de Chia presentacion de 500 kg",
+    "precio":"$900"
+    
+},
+
+{
+    "imagen":"./imagenes/creatina.jpg","alt":"Creatina",
+    "producto":"CREATINA",
+    "descripcion":"creatina Micronizada MArca ENA 300g",
+    "precio":"$2000"
+    
+},
+{
+    "imagen":"./imagenes/teverde_negro.jpg","alt":"Te Verde Y negro",
+    "producto":"TE VERDE Y TE NEGRO",
+    "descripcion":"Te Verde y Te negro en hebras 500gr",
+    "precio":"$1500"
+    
+}
+
+
+
+
+
+
+
+
+
+
+]
